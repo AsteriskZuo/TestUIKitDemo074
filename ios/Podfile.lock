@@ -43,7 +43,7 @@ PODS:
   - hermes-engine (0.74.2):
     - hermes-engine/Pre-built (= 0.74.2)
   - hermes-engine/Pre-built (0.74.2)
-  - HyphenateChat (4.7.0)
+  - HyphenateChat (4.8.1)
   - libwebp (1.3.2):
     - libwebp/demux (= 1.3.2)
     - libwebp/mux (= 1.3.2)
@@ -1009,10 +1009,29 @@ PODS:
     - Yoga
   - react-native-cameraroll (5.10.0):
     - React-Core
-  - react-native-chat-sdk (1.5.1):
-    - HyphenateChat (= 4.7.0)
+  - react-native-chat-sdk (1.6.2):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - HyphenateChat (~> 4.8.1)
+    - RCT-Folly (= 2024.01.01.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Codegen
     - React-Core
-  - react-native-chat-uikit (2.2.1):
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - Yoga
+  - react-native-chat-uikit (2.4.0):
     - React-Core
   - react-native-create-thumbnail (1.6.6):
     - DoubleConversion
@@ -1602,7 +1621,7 @@ SPEC CHECKSUMS:
   fmt: 4c2741a687cc09f0634a2e2c72a838b99f1ff120
   glog: fdfdfe5479092de0c4bdbebedd9056951f092c4f
   hermes-engine: 01d3e052018c2a13937aca1860fbedbccd4a41b7
-  HyphenateChat: 0d76f40cec79d084a2c1133e43987e7379124694
+  HyphenateChat: 88ff1478183f1349498bd592c89ea9c394c12f76
   libwebp: 1786c9f4ff8a279e4dac1e8f385004d5fc253009
   RCT-Folly: 02617c592a293bd6d418e0a88ff4ee1f88329b47
   RCTDeprecation: b03c35057846b685b3ccadc9bfe43e349989cdb2
@@ -1630,8 +1649,8 @@ SPEC CHECKSUMS:
   React-Mapbuffer: bf56147c9775491e53122a94c423ac201417e326
   react-native-agora: eeafa2f850a8bdd97666bf1eb5d72e46c2cf86ec
   react-native-cameraroll: 4701ae7c3dbcd3f5e9e150ca17f250a276154b35
-  react-native-chat-sdk: 65c3ee9d25a83ed148fe71d1874f87ba6250a38e
-  react-native-chat-uikit: abaebb64f58a6ddd53a3e060f8ac9f43e50df6cf
+  react-native-chat-sdk: 5f6792abcd230f67bbe081d1241dee137c63add4
+  react-native-chat-uikit: d660b28329e3a75399867c43eb70809eae57c5bb
   react-native-create-thumbnail: 11c1659d4b9cb5f40848cd9a512d00da5a797eb0
   react-native-document-picker: 5b97e24a7f1a1e4a50a72c540a043f32d29a70a2
   react-native-get-random-values: a6ea6a8a65dc93e96e24a11105b1a9c8cfe1d72a
@@ -1679,4 +1698,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 71c7720b4311ecbcca52c002a420741b5ae2565c
 
-COCOAPODS: 1.14.2
+COCOAPODS: 1.15.2

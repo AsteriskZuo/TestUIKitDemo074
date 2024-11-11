@@ -7,6 +7,7 @@
 
 import * as React from 'react';
 import {Pressable, SafeAreaView, Text, View} from 'react-native';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {
   Container,
   ConversationDetail,
@@ -26,6 +27,7 @@ function SendMessage() {
   const [ps, setPs] = React.useState(userPs);
   const [peer, setPeer] = React.useState(peerId);
   const im = useChatContext();
+  const {top} = useSafeAreaInsets();
 
   if (page === 0) {
     return (
@@ -93,6 +95,7 @@ function SendMessage() {
             });
           }}
           type={'chat'}
+          input={{props: {top: top}}}
         />
       </SafeAreaView>
     );
