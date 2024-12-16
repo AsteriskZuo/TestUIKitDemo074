@@ -1,4 +1,5 @@
 PODS:
+  - AgoraInfra_iOS (1.2.13)
   - AgoraIrisRTC_iOS (4.3.2-build.1)
   - AgoraRtcEngine_iOS (4.3.2):
     - AgoraRtcEngine_iOS/AIAEC (= 4.3.2)
@@ -43,7 +44,8 @@ PODS:
   - hermes-engine (0.74.2):
     - hermes-engine/Pre-built (= 0.74.2)
   - hermes-engine/Pre-built (0.74.2)
-  - HyphenateChat (4.8.1)
+  - HyphenateChat (4.11.0):
+    - AgoraInfra_iOS (= 1.2.13)
   - libwebp (1.3.2):
     - libwebp/demux (= 1.3.2)
     - libwebp/mux (= 1.3.2)
@@ -1009,11 +1011,11 @@ PODS:
     - Yoga
   - react-native-cameraroll (5.10.0):
     - React-Core
-  - react-native-chat-sdk (1.6.2):
+  - react-native-chat-sdk (1.7.0):
     - DoubleConversion
     - glog
     - hermes-engine
-    - HyphenateChat (~> 4.8.1)
+    - HyphenateChat (~> 4.11.0)
     - RCT-Folly (= 2024.01.01.00)
     - RCTRequired
     - RCTTypeSafety
@@ -1031,7 +1033,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-chat-uikit (2.4.0):
+  - react-native-chat-uikit (2.4.2-beta.0):
     - React-Core
   - react-native-create-thumbnail (1.6.6):
     - DoubleConversion
@@ -1452,6 +1454,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AgoraInfra_iOS
     - AgoraIrisRTC_iOS
     - AgoraRtcEngine_iOS
     - HyphenateChat
@@ -1613,6 +1616,7 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  AgoraInfra_iOS: 65e11a2183ab7836258768868d06058c22701b13
   AgoraIrisRTC_iOS: 3cb15344a503a1a35ab6d60481732a8beeda98fe
   AgoraRtcEngine_iOS: eaa97751fcfe1b50d9b067e0df92752a6a5f899f
   boost: d3f49c53809116a5d38da093a8aa78bf551aed09
@@ -1621,7 +1625,7 @@ SPEC CHECKSUMS:
   fmt: 4c2741a687cc09f0634a2e2c72a838b99f1ff120
   glog: fdfdfe5479092de0c4bdbebedd9056951f092c4f
   hermes-engine: 01d3e052018c2a13937aca1860fbedbccd4a41b7
-  HyphenateChat: 88ff1478183f1349498bd592c89ea9c394c12f76
+  HyphenateChat: 2fa2940fe4b6d881bc6d27b0deed1968396d529f
   libwebp: 1786c9f4ff8a279e4dac1e8f385004d5fc253009
   RCT-Folly: 02617c592a293bd6d418e0a88ff4ee1f88329b47
   RCTDeprecation: b03c35057846b685b3ccadc9bfe43e349989cdb2
@@ -1649,8 +1653,8 @@ SPEC CHECKSUMS:
   React-Mapbuffer: bf56147c9775491e53122a94c423ac201417e326
   react-native-agora: eeafa2f850a8bdd97666bf1eb5d72e46c2cf86ec
   react-native-cameraroll: 4701ae7c3dbcd3f5e9e150ca17f250a276154b35
-  react-native-chat-sdk: 5f6792abcd230f67bbe081d1241dee137c63add4
-  react-native-chat-uikit: d660b28329e3a75399867c43eb70809eae57c5bb
+  react-native-chat-sdk: 62d410fbbba31b230e432bab4765247569fca6cb
+  react-native-chat-uikit: 2811c7a907544ddba6fcad4d028b23e300b3ebed
   react-native-create-thumbnail: 11c1659d4b9cb5f40848cd9a512d00da5a797eb0
   react-native-document-picker: 5b97e24a7f1a1e4a50a72c540a043f32d29a70a2
   react-native-get-random-values: a6ea6a8a65dc93e96e24a11105b1a9c8cfe1d72a
@@ -1696,6 +1700,6 @@ SPEC CHECKSUMS:
   Yoga: ae3c32c514802d30f687a04a6a35b348506d411f
   ZIPFoundation: b8c29ea7ae353b309bc810586181fd073cb3312c
 
-PODFILE CHECKSUM: 71c7720b4311ecbcca52c002a420741b5ae2565c
+PODFILE CHECKSUM: ae9e593936603dd01defc38f6cd3a343b13fc924
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

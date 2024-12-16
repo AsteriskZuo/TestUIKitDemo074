@@ -5,6 +5,18 @@ require Pod::Executable.execute_command('node', ['-p',
     {paths: [process.argv[1]]},
   )', __dir__]).strip
 
+#  [!] The 'Pods-xxx' target has frameworks with conflicting names: aosl.xcframework.
+def __apply_aosl_framework_pre_install_workaround(installer)
+  rtc_pod_path = File.join(installer.sandbox.root, 'AgoraRtcEngine_iOS')
+  aosl_xcframework_path = File.join(rtc_pod_path, 'aosl.xcframework')
+  if File.exist?(aosl_xcframework_path)
+    puts "Deleting aosl.xcframework from #{aosl_xcframework_path}"
+    FileUtils.rm_rf(aosl_xcframework_path)
+  else
+    puts "aosl.xcframework not found, skipping deletion."
+  end
+end
+
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
 
@@ -28,6 +40,10 @@ target 'TestUIKitDemo074' do
     # Pods for testing
   end
 
+  pre_install do |installer|
+    __apply_aosl_framework_pre_install_workaround(installer)
+  end
+  
   post_install do |installer|
     # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
     react_native_post_install(
