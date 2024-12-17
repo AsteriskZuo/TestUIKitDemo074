@@ -6,7 +6,7 @@
  */
 
 import * as React from 'react';
-import {Pressable, SafeAreaView, Text, View} from 'react-native';
+import {Pressable, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {
   Container,
@@ -32,7 +32,7 @@ function SendMessage() {
   if (page === 0) {
     return (
       // 登录页面
-      <SafeAreaView style={{flex: 1}}>
+      <SafeAreaView style={styles.common}>
         <TextInput
           placeholder="Please App Key."
           value={appkey}
@@ -54,6 +54,7 @@ function SendMessage() {
           onChangeText={setPeer}
         />
         <Pressable
+          style={styles.login}
           onPress={() => {
             console.log('test:zuoyu:login', id, ps);
             im.login({
@@ -72,6 +73,7 @@ function SendMessage() {
           <Text>{'Login'}</Text>
         </Pressable>
         <Pressable
+          style={styles.login}
           onPress={() => {
             im.logout({
               result: () => {},
@@ -84,7 +86,7 @@ function SendMessage() {
   } else if (page === 1) {
     // 聊天页面
     return (
-      <SafeAreaView style={{flex: 1}}>
+      <SafeAreaView style={styles.common}>
         <ConversationDetail
           convId={peer}
           convType={0}
@@ -112,5 +114,17 @@ function App(): React.JSX.Element {
     </Container>
   );
 }
+
+const styles = StyleSheet.create({
+  common: {
+    flex: 1,
+  },
+  login: {
+    height: 40,
+    backgroundColor: 'darkseagreen',
+    borderColor: 'floralwhite',
+    borderWidth: 1,
+  },
+});
 
 export default App;
